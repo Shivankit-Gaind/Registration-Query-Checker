@@ -1,0 +1,54 @@
+                                                   INSTRUCTIONS
+
+1. Most of the details about the implementation of the program is included in the code itself in the form of comments.
+   The possibility of registration of a single course can be checked at a time.
+2. 4 types of registration queries are included that can be tested:
+
+  ----> register_For_PS1(STUDENT,L)
+  ----> register_For_PS2(STUDENT,L)  
+  ----> register_For_Higher_Degree_Course(STUDENT,L1,COURSE_NAME,L2,TIME_SLOT)
+  ----> register_For_Course(STUDENT,L1,COURSE_NAME,L2,TIME_SLOT)
+
+3. INPUT FORMAT
+
+  (i) register_For_PS1(STUDENT,L)
+
+      where 'STUDENT' is the name of the student and 'L' is the list of the course he has completed.
+      example: register_For_PS1(jitesh,[c1,c2,c3,c4,c5])
+
+ (ii) register_For_PS2(STUDENT,L)
+
+      where 'STUDENT' is the name of the student and 'L' is the list of the course he has completed.
+      example: register_For_PS2(jitesh,[c1,c2,c3,c4,c5])
+
+ (iii) register_For_Higher_Degree_Course(STUDENT,L1,COURSE_NAME,L2,TIME_SLOT)
+
+      where 'STUDENT' is the name of the student. 
+     'L1' is the list of the course he has completed.
+     'COURSE_NAME' is the name of the course.
+     'L2' is the list of prerequisites of the course to be registered.
+     'TIME_SLOT' is the slot in which the course is to be registered.
+      Example: register_For_Higher_Degree_Course(jitesh,[s1,s2,s3,s4,s5,s6,s7,s8],s9,[s1],2-2).
+
+ (iv) register_For_Course(STUDENT,L1,COURSE_NAME,L2,TIME_SLOT)
+     
+      where 'STUDENT' is the name of the student. 
+     'L1' is the list of the course he has completed.
+     'COURSE_NAME' is the name of the course.
+     'L2' is the list of prerequisites of the course to be registered.
+     'TIME_SLOT' is the slot in which the course is to be registered.
+      Example: register_For_Course(jitesh,[s1,s2,s3,s4,s5,s6,s7,s8],s9,[s1],2-2).
+
+4. INPUT FORMAT FOR 'TIME_SLOT' VARIABLE
+   The format of time slot is: X-Y
+   where X refers to the day number of the week
+   and Y stands for the hour number.
+   Example: 2-4 stands for Tuesday 4th hour(11 A.M. - 12 Noon)
+
+5. VERY IMPORTANT: 
+   
+   (a) As soon as you register for a course, add a Predicate 'slot_booked(TIME_SLOT)' in the knowledgebase so that it can check for clashes
+       if any one tries to register a course in the same slot.
+   (b) Names of all the students and the courses have to be taken only from the lists provided in the knowledge base.  
+   (c) Prerequisites of the course to be registered may or may not be present in the course structure list.
+   
